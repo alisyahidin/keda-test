@@ -33,4 +33,20 @@ function numberTwo(arr = [], length = 1) {
   return result;
 }
 
-module.exports = { numberOne, numberTwo }
+// Answer for number 3
+function numberThree(obj = {}) {
+  let result = 0;
+
+  for (key in obj) {
+    if (typeof obj[key] === "number") {
+      result += obj[key];
+    }
+    if (typeof obj[key] === "object" && obj[key] !== null) {
+      result += numberThree(obj[key])
+    }
+  }
+
+  return result;
+}
+
+module.exports = { numberOne, numberTwo, numberThree }
