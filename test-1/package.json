@@ -1,0 +1,15 @@
+{
+  "name": "test-1",
+  "version": "1.0.0",
+  "description": "Answer for KeDA Tech coding test number 1",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --no-cache --watchAll"
+  },
+  "author": "Ali Syahidin",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.2"
+  }
+}
