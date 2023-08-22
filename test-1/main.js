@@ -17,4 +17,20 @@ function numberOne(arr = []) {
   return result;
 }
 
-module.exports = { numberOne }
+// Answer for number 2
+function numberTwo(arr = [], length = 1) {
+  let result = 0;
+  if (length <= 0 || length > arr.length) return result;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    let sum = 0;
+    for (let x = i; x < i + length; x++) {
+      sum += arr[x];
+    }
+    if (sum > result) result = sum
+  }
+
+  return result;
+}
+
+module.exports = { numberOne, numberTwo }
