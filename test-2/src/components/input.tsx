@@ -6,7 +6,7 @@ export type InputProps = {
   rightIcon?: ReactElement;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ leftIcon, rightIcon, error, ...props }, ref) {
+const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ leftIcon, rightIcon, ...props }, ref) {
   return (
     <div className="flex gap-4">
       <div className="shrink-0 mt-4">
@@ -19,7 +19,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ leftIcon
           className="flex-1 border-b-2 py-3 pr-9 shadow-none outline-none"
         />
         {rightIcon && <div className="absolute right-0 py-1 pl-3 pr-1">{rightIcon}</div>}
-        <span className="text-danger min-h-[18px] text-xs">{error}</span>
       </label>
     </div>
   );
